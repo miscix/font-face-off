@@ -1,0 +1,85 @@
+@import "bootstrap/bootstrap.less";
+
+html, body {
+	padding: 0 0;
+}
+
+// @import "bootstrap/responsive.less";
+
+// @import "helper.less";
+
+/* ===== Primary Styles ========================================================
+	 Author: Mushex Antaranian
+	 ========================================================================== */
+
+@media (min-width: 979px) { 
+	body {
+		padding-top: 60px;
+	}
+}
+
+body {
+	.fill-height(60px);
+	overflow-y: scroll;
+
+	#fonts {
+		.font {
+			margin: 0 0 .8em;
+			border: 1px solid #DDD;
+			.border-radius(2px);
+			&:hover {
+				header {
+					background: @grayLighter;
+				}
+			}
+			header {
+				padding: .2em .4em;
+				border-bottom: 1px solid #DDD;
+				.font-name {
+					font-size: 1.2em;
+					line-height: 1.6em;
+				}
+				.font-info {
+					padding-left: .2em;
+					color: @gray;
+				}
+				.font-use {
+					float: right;
+				}
+			}
+			.font-preview {
+				p[class*=font-] {
+					margin: .8em .8em 1em;
+					font-size: 1.6em;
+				}
+			}
+			footer {
+				border-top: 1px solid #DDD;
+				.nav-tabs {
+					margin: -1px;
+					margin-right: 0;
+					li {
+						a {
+							margin-bottom: 0;
+							.border-radius(0);
+						}
+					}
+				}
+				.tab-content {
+					div {
+						padding: .4em;
+						pre {
+							margin: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.qq-uploader {
+	ul {
+		display: none;
+	}
+}

@@ -1,0 +1,26 @@
+{
+  "name": "font-face-off",
+  "description": "Node.js @font-face kit generator app",
+  "version": "0.2",
+  "private": true,
+  "author": {
+    "name": "Mushex Antaranian",
+    "email": "mushex@antaranian.com"
+  },  
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "3.0.0",
+    "riak-js": "0.4.1",
+    "libxmljs": "0.6.1",
+    "step": "0.0.5"
+  },
+  "keywords": [
+    "font-face",
+    "font",
+    "ttf",
+    "woff",
+    "webfont"
+  ],
+}

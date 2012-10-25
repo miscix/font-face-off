@@ -1,0 +1,40 @@
+<header class="clearfix">
+	<strong class="font-name">
+		<a> <%= fontid %> </a>
+	</strong>
+	<small class="font-info">
+		<%= weightType %> <%= weight %> <%= (style !== 'normal') ? style : '' %>
+	</small>
+	<button class="btn btn-primary btn-small font-use" data-toggle="collapse" data-target="#usage-<%= fontid %>"> Use Font </button>
+</header>
+
+<style type="text/css"> .font-<%= fontid %> { font-family: '<%= family %>' !important; font-style: <%= style %> !important; font-weight: <%= weight %> !important; } </style>
+<div class="font-preview">
+	<p class="font-<%= fontid %> preview-text"> <%= text %> </p>
+</div>
+<footer id="usage-<%= fontid %>" class="tabbable tabs-left collapse">
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="#standard-<%= fontid %>" data-toggle="tab">Standard</a></li>
+		<li><a href="#import-<%= fontid %>" data-toggle="tab">Import</a></li>
+		<li><a href="#javascript-<%= fontid %>" data-toggle="tab">JavaScript</a></li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane active" id="standard-<%= fontid %>">
+			<pre><code> &lt;link rel="stylesheet/css" href="<%= src %>"&gt; </code></pre>
+		</div>
+		<div class="tab-pane" id="import-<%= fontid %>">
+			<pre><code> @import url(<%= src %>); </code></pre>
+		</div>
+		<div class="tab-pane" id="javascript-<%= fontid %>">
+			<pre><code>&lt;script type="text/javascript"&gt;
+	(function (url) {
+		var link = document.createElement('link');
+		link.type = 'text/css';
+		link.rel = 'stylesheet';
+		link.href = url;
+		document.getElementsByTagName('head')[0].appendChild(link);
+	})('<%= src %>');
+&lt;/script&gt;</code></pre>
+		</div>
+	</div>
+</footer>
